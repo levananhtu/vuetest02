@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Index</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="../js/vuejs/vue.js"></script>
 </head>
 <body>
 <div id="app">
@@ -31,17 +31,26 @@
 </div>
 <div id="app-4">
     <em><p style="color: green">True:</p></em>
-    <div v-for="process in processes" style="color: darkgreen">
+    <div style="color: darkgreen" v-for="process in processes">
         <b><p v-if="process.didStart">
             {{process.name}}
         </p></b>
     </div>
     <em><p style="color: red">False:</p></em>
-    <div v-for="process in processes" style="color: darkred">
+    <div style="color: darkred" v-for="process in processes">
         <b><p v-if="!process.didStart">
             {{process.name}}
         </p></b>
     </div>
+</div>
+<div id="app-5">
+    <p>{{ message }}</p>
+    <button v-on:dblclick="reverseMessage">Reverse Message</button>
+    <input>
+</div>
+<br>
+<div id="app-6">
+    <todo-item></todo-item>
 </div>
 <script src="../js/index.js"></script>
 </body>

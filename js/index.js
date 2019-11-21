@@ -44,3 +44,22 @@ let app4 = new Vue({
 });
 /**/
 app4.processes.push({name: "C++", didStart: false});
+/**/
+let app5 = new Vue({
+    el: '#app-5',
+    data: {
+        message: 'Hello Vue.js!'
+    },
+    methods: {
+        reverseMessage: function () {
+            this.message = this.message.split('').reverse().join('')
+        }
+    }
+});
+/**/
+Vue.component("todo-item", {
+    template: "<li>This is a component</li>"
+});
+let app6 = new Vue({
+    el: "#app-6"
+});
