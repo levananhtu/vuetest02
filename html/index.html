@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    {{message}}
+</div>
+<div id="app-2">
+  <span v-bind:title="message">
+    Hover your mouse over me for a few seconds
+    to see my dynamically bound title!
+  </span>
+</div>
+<div class="whatever">
+  <span v-bind:title="message01">
+    Hover your mouse over me for a few seconds
+    to see my dynamically bound title!
+  </span>
+    <p>
+        {{message02}}
+    </p>
+</div>
+<div id="app-3">
+    <span v-if="!seen">
+        Now you see me
+    </span>
+</div>
+<div id="app-4">
+    <em><p style="color: green">True:</p></em>
+    <div v-for="process in processes" style="color: darkgreen">
+        <b><p v-if="process.didStart">
+            {{process.name}}
+        </p></b>
+    </div>
+    <em><p style="color: red">False:</p></em>
+    <div v-for="process in processes" style="color: darkred">
+        <b><p v-if="!process.didStart">
+            {{process.name}}
+        </p></b>
+    </div>
+</div>
+<script src="../js/index.js"></script>
+</body>
+</html>
